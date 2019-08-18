@@ -1,0 +1,90 @@
+1 Crear proyecto WebApi
+2 Crear carpeta Models con 2 clases : PaymentDetailContext y PaymentDetail
+
+namespace WebApi.Models
+{
+    public class PaymentDetailContext:DbContext
+    {
+        public PaymentDetailContext(DbContextOptions <PaymentDetailContext> options):base(options)
+        {
+
+        }
+        public DbSet<PaymentDetail> PaymentDetails { get; set; }
+
+    }
+}
+
+
+namespace WebApi.Models
+{
+    public class PaymentDetail
+
+    {
+        [Key]
+        public int PMI { get; set; }
+        [Required]
+        [Column(TypeName ="nvarchar(100)")]
+        public string CardOwner { get; set; }
+        [Required]
+        [Column(TypeName = "varchar(16)")]
+        public string CardNumber { get; set; }
+        [Required]
+        [Column(TypeName = "varchar(5)")]
+        public string ExpirtionDate { get; set; }
+        [Required]
+        [Column(TypeName = "varchar(3)")]
+        public string CVV { get; set; }
+    }
+}
+
+3. Add en Clase appsettings.json
+
+ "ConnectionStrings": {
+    "DevConnection" : "Data Source=localhost;Initial Catalog=POST_PRUEBA;Persist Security Info=True;User ID=julio;Password=123456;MultipleActiveResultSets=True;"
+  }
+
+
+4. En la clase Startup  
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<PaymentDetailContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+        }
+
+5. Abrir consola Nuget PM
+#   Add-Migration "InitialCreate"
+#   Update-Database
+
+6. Add Controller   --API Controller with actions using EF
+opciones
+  -PaymentDetail (WebApi.Models)
+  -PaymentDetailContext (WebApi.Models)
+  -PaymentDetailsController
+
+7. Revisamos los metodos en Postman
+
+8.Modificamos en Startup, para revisar los atributos igual al modelo
+
+       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(options =>
+                {
+                    var resolver = options.SerializerSettings.ContractResolver;
+                    if (resolver != null)
+                        (resolver as DefaultContractResolver).NamingStrategy = null;
+                });
+
+
+9.Add Cors, instalar nuget cors: Microsoft.AspNetCore.Cors
+Add ConfigreServices 
+  services.AddCors(); al final
+
+Add Configure Startup    
+app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200/")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+           # app.UseCors(options =>
+           #options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
