@@ -1,0 +1,14 @@
+C:\Users\JULIO\source\repos\WebApi\WebApi\bin\Debug\netcoreapp2.2\WebApi.deps.json
+C:\Users\JULIO\source\repos\WebApi\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.json
+C:\Users\JULIO\source\repos\WebApi\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.dev.json
+C:\Users\JULIO\source\repos\WebApi\WebApi\bin\Debug\netcoreapp2.2\WebApi.dll
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.csprojAssemblyReference.cache
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cache
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cs
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfoInputs.cache
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfo.cs
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\JULIO\source\repos\WebApi\WebApi\bin\Debug\netcoreapp2.2\WebApi.pdb
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.dll
+C:\Users\JULIO\source\repos\WebApi\WebApi\obj\Debug\netcoreapp2.2\WebApi.pdb
